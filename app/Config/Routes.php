@@ -38,6 +38,8 @@ $routes->set404Override();
 $routes->get('login','Auth::index');
 $routes->get('logout','Auth::logout');
 $routes->post('login','Auth::proses');
+$routes->get('daftar', 'Auth::registrasi');
+$routes->post('/proses_daftar', 'Auth::proses_daftar');
 $routes->get('/', 'Home::index',['filter'=> 'authGuard']);
 $routes->get('buku', 'BukuController::index',['filter' => 'authGuard']);
 $routes->get('buku/tambah/','BukuController::tambah',['filter'=> 'authGuard']);
@@ -63,11 +65,12 @@ $routes->post('peminjam/tambah_proses/','Peminjam::proses');
 $routes->get('peminjam/edit/(:num)','Peminjam::edit/$1',['filter'=> 'authGuard']);
 $routes->post('peminjam/edit_proses/(:num)','Peminjam::edit_proses/$1');
 $routes->get('peminjam/delete/(:num)','Peminjam::delete/$1');
-
+$routes->post('pilih', 'Front::proses');
 // $routes->get('peminjam/tambah', 'Peminjam::tambah');
 
 // $routes->get('pinjam', 'PinjamController::index');
 $routes->get('kembali', 'Kembali::index');
+$routes->get('/front', 'Front::index');
 
 
 /*

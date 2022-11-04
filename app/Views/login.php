@@ -76,6 +76,11 @@
                     <i class="fa fa-fw fa-sign-in-alt mr-1"></i> Masuk
                 </button>
             </div>
+            <div class="col-md-6 col-xl-5">
+                <a href="daftar" class="btn btn-block btn-danger">
+                     Daftar <i class="fa fa-fw fa-sign-in-alt mr-1"></i>
+                </a>
+            </div>
         </div>
     </form>
                         <!-- END Sign In Form -->
